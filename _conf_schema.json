@@ -1,0 +1,8 @@
+{
+  "allowlist": {
+    "description": "白名单",
+    "type": "text",
+    "hint": "逗号分隔的 QQ 号或其他平台 UID。白名单内用户正常触发框架默认 LLM 回复，其余用户静默跳过。",
+    "default": ""
+  }
+}
