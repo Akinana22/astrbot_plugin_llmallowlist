@@ -7,7 +7,7 @@
   "config": {
     "allowlist": {
       "description": "Allowlist",
-      "hint": "Comma-separated QQ IDs or other platform UIDs. Users in the allowlist trigger the framework default LLM reply normally, others are silently skipped."
+      "hint": "One line per platform, format: platform[UID1,UID2,...]. Example: qq[123456,789012], discord[5678901234]. Users in the allowlist trigger the framework default LLM reply normally, others are silently skipped."
     }
   }
 }

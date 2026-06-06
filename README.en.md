@@ -12,10 +12,21 @@ Configure via the AstrBot WebUI plugin management page.
 |--------|-------------|---------|
 | `allowlist` | Allowlist | `""` |
 
+### Format
+
+One line per platform, format: `platform[UID1,UID2,...]`. Example:
+
+```
+qq[123456,789012]
+discord[5678901234]
+telegram[987654321]
+```
+
+Supported platforms: `aiocqhttp`, `qqofficial`, `telegram`, `discord`, `wecom`, `lark`, `dingtalk`, `slack`, `kook`, `webchat`.
+
 ### Notes
 
 - When the allowlist is empty, all LLM replies are silently skipped.
-- UID formats differ across platforms (QQ uses pure digits, Discord uses numeric IDs). Ensure consistent formatting.
 - Reload the plugin after changing configuration.
 
 ## Features
