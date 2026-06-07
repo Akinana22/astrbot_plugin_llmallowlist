@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Reference directories
+pre_filter_new/
+qqAuthCode/
+astrbot/
+message/
+platform/
+
