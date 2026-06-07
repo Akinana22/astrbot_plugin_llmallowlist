@@ -5,6 +5,10 @@
     "short_desc": "框架默认LLM白名单过滤"
   },
   "config": {
+    "admin_bypass": {
+      "description": "管理员自动放行",
+      "hint": "开启后，AstrBot 管理员的消息不受白名单限制，直接触发框架默认 LLM 回复。"
+    },
     "allowlist": {
       "description": "白名单",
       "hint": "按行填写，格式：平台名[UID1,UID2,...]。白名单内用户正常触发框架默认 LLM 回复，其余用户静默跳过。"

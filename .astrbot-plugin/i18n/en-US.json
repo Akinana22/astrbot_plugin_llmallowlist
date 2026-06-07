@@ -5,6 +5,10 @@
     "short_desc": "Framework Default LLM Allowlist Filter"
   },
   "config": {
+    "admin_bypass": {
+      "description": "Admin Bypass",
+      "hint": "When enabled, AstrBot admins bypass the allowlist and always trigger the framework default LLM reply."
+    },
     "allowlist": {
       "description": "Allowlist",
       "hint": "One line per platform, format: platform[UID1,UID2,...]. Users in the allowlist trigger the framework default LLM reply normally, others are silently skipped."

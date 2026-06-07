@@ -48,6 +48,9 @@ class LLMAllowList(Star):
     @filter.platform_adapter_type(filter.PlatformAdapterType.ALL)
     @filter.event_message_type(filter.EventMessageType.GROUP_MESSAGE)
     async def on_message(self, event: AstrMessageEvent):
+        if self.config.get("admin_bypass", False) and event.is_admin():
+            return
+
         sender_id = event.get_sender_id()
         platform = event.get_platform_name()
         allowlist = self._parse_allowlist()

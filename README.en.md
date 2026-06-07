@@ -10,6 +10,7 @@ Configure via the AstrBot WebUI plugin management page.
 
 | Option | Description | Default |
 |--------|-------------|---------|
+| `admin_bypass` | Admin Bypass | `false` |
 | `allowlist` | Allowlist | 7 platforms empty `[]` |
 | `reply_msg` | Custom Reply | 7 platforms empty `[]` |
 
@@ -49,6 +50,7 @@ telegram[987654321]
 
 ```
 Group message → llm_allowlist plugin
+├─ admin_bypass enabled and sender is admin → return, LLM replies normally
 ├─ sender_id in allowlist → return, LLM replies normally
 └─ not in allowlist
     ├─ platform has reply_msg → try quote/@/plain → block LLM
