@@ -1,6 +1,6 @@
 import re
 
-from astrbot.api import AstrBotConfig
+from astrbot.api import AstrBotConfig, logger
 from astrbot.api.event import filter, AstrMessageEvent, MessageChain
 from astrbot.api.message_components import Plain, Reply as CompReply, At as CompAt
 from astrbot.api.star import Context, Star
@@ -48,8 +48,17 @@ class LLMAllowList(Star):
     @filter.platform_adapter_type(filter.PlatformAdapterType.ALL)
     @filter.event_message_type(filter.EventMessageType.GROUP_MESSAGE)
     async def on_message(self, event: AstrMessageEvent):
-        if self.config.get("admin_bypass", False) and event.is_admin():
-            return
+        if self.config.get("admin_bypass", False):
+            group = event.message_obj.group
+            group_admins = group.group_admins if group else None
+            is_admin = event.is_admin()
+            logger.debug(
+                f"[llm_allowlist] admin_check | platform={event.get_platform_name()} "
+                f"sender_id={event.get_sender_id()} is_admin={is_admin} "
+                f"role={event.role} group_admins={group_admins}"
+            )
+            if is_admin:
+                return
 
         sender_id = event.get_sender_id()
         platform = event.get_platform_name()
