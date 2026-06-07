@@ -37,6 +37,7 @@ telegram[987654321]
 ### Notes
 
 - When the allowlist is empty, all LLM replies are silently skipped.
+- Admin bypass relies on platform-level admin detection, currently only supported on aiocqhttp (OneBot).
 - Custom replies in `reply_msg` attempt: quote reply → @ reply → plain text.
 - Reload the plugin after changing configuration.
 

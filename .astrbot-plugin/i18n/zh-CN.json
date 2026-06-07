@@ -7,7 +7,7 @@
   "config": {
     "admin_bypass": {
       "description": "管理员自动放行",
-      "hint": "开启后，AstrBot 管理员的消息不受白名单限制，直接触发框架默认 LLM 回复。"
+      "hint": "开启后，AstrBot 管理员的消息不受白名单限制，直接触发框架默认 LLM 回复。注意：管理员检测仅 aiocqhttp（OneBot）平台有效。"
     },
     "allowlist": {
       "description": "白名单",

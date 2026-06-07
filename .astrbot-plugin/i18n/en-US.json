@@ -7,7 +7,7 @@
   "config": {
     "admin_bypass": {
       "description": "Admin Bypass",
-      "hint": "When enabled, AstrBot admins bypass the allowlist and always trigger the framework default LLM reply."
+      "hint": "When enabled, AstrBot admins bypass the allowlist and always trigger the framework default LLM reply. Note: admin detection only works on aiocqhttp (OneBot)."
     },
     "allowlist": {
       "description": "Allowlist",
